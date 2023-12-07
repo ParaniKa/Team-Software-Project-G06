@@ -1,0 +1,38 @@
+<div>
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-header">
+                <h4>Wedding Hall Booking
+                    <a routerLink="/booking/booking" class="btn btn-danger float-end">Back</a>
+                </h4>
+            </div>
+            <div class="card-body">
+                <form (ngSubmit)="saveBooking()">
+                    <div class="md-3">
+                        <label>Advance Payment Date</label>
+                        <input type="date" [(ngModel)]="payment_date" name="payment_date" class="form-control">
+                        <span *ngIf="errors.payment_date" class="text-danger">{{errors.payment_date}}</span> 
+                    </div>
+
+                    <div class="md-3">
+                        <label>Advance Payment Total</label>
+                        <input type="number" [(ngModel)]="payment_total" name="payment_total" class="form-control">
+                        <span *ngIf="errors.payment_total" class="text-danger">{{errors.payment_total}}</span> 
+                    </div>
+
+
+                    <div class="md-3">
+                        <label>Booking Status</label>
+                        <input type="text" [(ngModel)]="booking_status" name="booking_status" class="form-control">
+                        <span *ngIf="errors.booking_status" class="text-danger">{{errors.booking_status}}</span>
+                    </div>
+
+                      <br>
+                    <div class="mb-3">
+                        <button type="submit" class="btn btn-primary">Next</button>
+                    </div>
+                </form>
+            </div>
+    </div>
+</div>
+

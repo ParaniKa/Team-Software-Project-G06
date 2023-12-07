@@ -1,0 +1,52 @@
+<body [ngStyle]="{backgroundImage:'url(../assets/images/2.jpg)'}">
+
+    <br>
+    <br>
+    <br>
+<div>
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-header">
+                <h4>Auspicious Time Edit
+                    <a routerLink="/auspicious/adminauspicious" class="btn btn-danger float-end">Back</a>
+                </h4>
+            </div>
+            <div class="card-body">
+                <form (ngSubmit)="updateAuspicious()">
+                    <div *ngIf="auspiciouss">
+                        <div class="md-3">
+                            <label>Date</label>
+                            <input type="date" [(ngModel)]="auspiciouss.auspicious_date" name="auspicious_date" class="form-control">
+                            <span *ngIf="errors.auspicious_date" class="text-danger">{{errors.auspicious_date}}</span>
+                        </div>
+                        <div class="md-3">
+                            <label>Day</label>
+                            <input type="text" [(ngModel)]="auspiciouss.auspicious_day" name="auspicious_day" class="form-control">
+                            <span *ngIf="errors.auspicious_day" class="text-danger">{{errors.auspicious_day}}</span>
+                        </div>
+                        
+                        <div class="md-3">
+                            <label>Auspicious Time Start</label>
+                            <input type="time" [(ngModel)]="auspiciouss.auspicious_time_start" name="auspicious_time_start" class="form-control">
+                            <span *ngIf="errors.auspicious_time_start" class="text-danger">{{errors.auspicious_time_start}}</span>
+                        </div>
+                        <div class="md-3">
+                            <label>Auspicious Time End</label>
+                            <input type="time" [(ngModel)]="auspiciouss.auspicious_time_end" name="auspicious_time_end" class="form-control">
+                            <span *ngIf="errors.auspicious_time_end" class="text-danger">{{errors.auspicious_time_end}}</span>
+                        </div>
+                        </div>
+                     <br>
+                    <div class="mb-3">
+                        <button type="submit" class="btn btn-warning">Update</button>
+                    </div>  
+                   
+                </form>
+            </div>   
+        </div>
+    </div>
+</div>
+</body>
+
+
+

@@ -1,0 +1,28 @@
+<body [ngStyle]="{backgroundImage:'url(../assets/images/2.jpg)'}">
+    <div>
+        <br>
+        <br>
+        
+        <a routerLink="/booking/booking" class="btn btn-warning">Back</a>
+        
+        <br>
+        <br>
+    <div class="container text-center">
+        
+            <full-calendar
+                [options]="calendarOptions" 
+                [events] = "[
+                        {title: 'confirmed', date:'2023-09-02', color:'green'},
+                        {title: 'not confirmed', date:'2023-09-10', color:'red'},
+                        {title: 'confirmed', date:'2023-09-20', color:'green'},
+                        {title: 'not confirmed', date:'2023-09-30', color:'red'},
+                        ]"
+    
+                 >
+        
+            </full-calendar>
+        </div>
+        
+    </div>
+
+</body>

@@ -1,0 +1,70 @@
+<body [ngStyle]="{backgroundImage:'url(../assets/images/2.jpg)'}">
+
+    <br>
+    <br>
+    <br>
+<div>
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-header">
+                <h4>Food Package Edit
+                    <a routerLink="/food/adminfood" class="btn btn-danger float-end">Back</a>
+                </h4>
+            </div>
+            <div class="card-body">
+                <form (ngSubmit)="updateFood()">
+                    <div *ngIf="foods">
+                        <div class="form-row">
+                            <div class="col-md-6">
+                                <label>Package</label>
+                                <input type="text" [(ngModel)]="foods.package" name="package" class="form-control">
+                                <span *ngIf="errors.package" class="text-danger">{{errors.package}}</span>
+                            </div>
+                            <div class="col-md-6">
+                                <label>Welcome Drink</label>
+                                <textarea [(ngModel)]="foods.welcome_drink" name="welcome_drink" class="form-control"></textarea>
+                                <span *ngIf="errors.welcome_drink" class="text-danger">{{errors.welcome_drink}}</span>
+                            </div>
+                            </div>
+    
+    
+                            <div class="form-row">
+                            <div class="col-md-6">
+                                <label>Food Menu</label>
+                                <textarea [(ngModel)]="foods.food_menu" name="food_menu" class="form-control"></textarea>
+                                <span *ngIf="errors.food_menu" class="text-danger">{{errors.food_menu}}</span>
+                            </div>
+                            <div class="col-md-6">
+                                <label>Condiments</label>
+                                <textarea [(ngModel)]="foods.condiments" name="condiments" class="form-control"></textarea>
+                                <span *ngIf="errors.condiments" class="text-danger">{{errors.condiments}}</span>
+                            </div>
+                            </div>
+    
+                            <div class="form-row">
+                            <div class="col-md-6">
+                                <label>Desserts</label>
+                                <textarea [(ngModel)]="foods.desserts" name="desserts" class="form-control"></textarea>
+                                <span *ngIf="errors.desserts" class="text-danger">{{errors.desserts}}</span>
+                            </div>
+                            <div class="col-md-6">
+                                <label>Price</label>
+                                <input type="number" [(ngModel)]="foods.price" name="price" class="form-control">
+                                <span *ngIf="errors.price" class="text-danger">{{errors.price}}</span>
+                            </div>
+                     
+                    </div> 
+                  </div>
+                    <br>
+                    <div class="mb-3">
+                        <button type="submit" class="btn btn-warning">Update</button>
+                    </div>  
+                   
+                </form>
+            </div>   
+        </div>
+    </div>
+</div>
+</body>
+
+

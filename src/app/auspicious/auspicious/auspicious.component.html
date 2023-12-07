@@ -1,0 +1,214 @@
+<body [ngStyle]="{backgroundImage:'url(../assets/images/2.jpg)'}">
+    <div class="sidebar" >
+        <div class="logo"></div>
+
+
+        <div class="user--info">
+            <span class="user-name">
+                <strong>Name:{{user.name}}</strong>
+            </span>
+            <br>
+            <span class="user-name">
+                <strong>Email: {{user.email}}</strong>
+            </span>
+            <br>
+            <span class="user-name">
+                <strong>Address: {{user.address}}</strong>
+            </span>
+            <br>
+            <span class="user-name">
+                <strong>Mobile No: {{user.mobilenumber}}</strong>
+            </span>
+        </div>
+
+        <br>
+
+        <ul class="menu">
+            <li>
+                <a routerLink="/userprofile">
+                    <i class="fas fa-book"></i>
+                    <span>Booking Form</span>
+                </a>
+            </li>
+
+  
+            <li class="active">
+                <a routerLink="/auspicious/auspicious">
+                    <i class="fa fa-clock-o"></i>
+                    <span>Auspicious Time</span>
+                </a>
+            </li>
+  
+            <li>
+                <a routerLink="/calendar/calendar">
+                    <i class="fas fa-calendar"></i>
+                    <span>Calendar</span>
+                </a>
+            </li>
+  
+            <li>
+                <a routerLink="/logout">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>LogOut</span>
+                </a>
+            </li> 
+        </ul>
+    </div>
+  
+     <div class="main--content">
+        <div class="header--wrapper">
+            <div class="header--title">
+                <h3>Customer Profile</h3>
+                <h3></h3>
+            </div>
+        </div>
+            
+            <!-- <div class="user--info">
+                <span class="user-name">
+                    <strong>Name:{{user.name}}</strong>
+                </span>
+                <br>
+                <span class="user-name">
+                    <strong>Email: {{user.email}}</strong>
+                </span>
+            </div> -->
+           
+
+
+
+
+         
+        
+            <div>
+                <div class="mt-5 container">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4>Auspicious Times 
+                                <!-- <a routerLink="/auspicious/createauspicious" class="btn btn-primary float-end">Add Auspicious Time</a> -->
+                            </h4>
+                        </div>
+                    <div class="card-body">
+                        <table class="table table-striped table-bordered">
+                            <thead>
+                                <tr>
+                                    <!-- <th>ID</th> -->
+                                    <th>Date</th>
+                                    <th>Day</th>
+                                    <th>Auspicious Time Start</th>
+                                    <th>Auspicious Time End</th>
+                                    <!-- <th>Action</th> -->
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor = "let item of this.auspiciouss">
+                                    <!-- <td>{{item.id}}</td> -->
+                                    <td>{{item.auspicious_date}}</td>
+                                    <td>{{item.auspicious_day}}</td>
+                                    <td>{{item.auspicious_time_start}}</td>
+                                    <td>{{item.auspicious_time_end}}</td>
+                                    <!-- <td>
+                                        <a routerLink = "/{{item.id}}/editauspicious" class="btn btn-success mr-2 mb-2">Edit</a>
+                                        <button type="button" (click)="deleteAuspicious($event,item.id)" class="btn btn-danger mr-2 mb-2">Delete</button>
+                                    </td> -->
+                                </tr>
+                            </tbody>
+                        </table>    
+                    </div>
+                    </div>
+                </div>
+            </div>
+  
+  
+  
+         
+          
+  
+  
+               
+
+
+  
+          <!-- footer -->
+        <section class="footer-top">
+          <div class="cont">
+              <div class="row">
+                  <div class="col-md-4">
+                      <div class="footer-all-menu">
+                          <h2>Quick Links</h2>
+                          <ul>
+                              <li>
+                                  <i class="fa fa-circle"></i>
+                                  <a routerLink="">Home</a>
+                              </li>
+                              <li>
+                                  <i class="fa fa-circle"></i>
+                                  <a routerLink="/gallery">Gallery</a>
+                              </li>
+                              <li>
+                                  <i class="fa fa-circle"></i>
+                                  <a routerLink="/aboutus">About us</a>
+                              </li>
+                              <li>
+                                  <i class="fa fa-circle"></i>
+                                  <a routerLink="/feedback">Feedback</a>
+                              </li>
+                              <li>
+                                  <i class="fa fa-circle"></i>
+                                  <a routerLink="/contactus">Contact us</a>
+                              </li>
+                              
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="col-md-4">
+                      <div class="footer-all-menu">
+                          <h2>Services</h2>
+                          <ul>
+                              <li>
+                                  <i class="fa fa-circle"></i>
+                                  <a routerLink="/fooditem">Food Item</a>
+                              </li>
+                              <li>
+                                  <i class="fa fa-circle"></i>
+                                  <a routerLink="/gallery">Photography & Videography</a>
+                              </li>
+                              <!-- <li>
+                                  <i class="fa fa-circle"></i>
+                                  <a routerLink="/beautician">Beautician</a>
+                              </li>
+                              <li>
+                                  <i class="fa fa-circle"></i>
+                                  <a routerLink="/vehicle">car & Vehicles</a>
+                              </li> -->
+                              
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="col-md-3">
+                      <div class="footer-all-menu">
+                          <h2>Events</h2>
+                          <ul>
+                              <li>
+                                  <i class="fa fa-circle"></i>
+                                  <a routerLink="">Wedding</a>
+                              </li>
+                              <li>
+                                  <i class="fa fa-circle"></i>
+                                  <a routerLink="menu">Reception</a>
+                              </li>
+                              <li>
+                                  <i class="fa fa-circle"></i>
+                                  <a routerLink="gallery">Puberty Ceremony</a>
+                              </li> 
+                          </ul>
+                      </div>
+                  </div>
+              </div>  
+          </div>
+      </section>
+      
+  
+  
+    </div>
+  </body>
+  

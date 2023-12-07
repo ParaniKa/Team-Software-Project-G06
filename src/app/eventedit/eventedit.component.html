@@ -1,0 +1,38 @@
+<div>
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-header">
+                <h4>Event Edit
+                    <a routerLink="/event" class="btn btn-danger float-end">Back</a>
+                </h4>
+            </div>
+            <div class="card-body">
+                <form (ngSubmit)="updateEvent()">
+                    <div *ngIf="events">
+                        <div class="md-3">
+                            <label>Event Name</label>
+                            <input type="text" [(ngModel)]="events.event_name" name="eventname" class="form-control">
+                            <span *ngIf="errors.event_name" class="text-danger">{{errors.event_name}}</span> 
+                        </div>
+                        <div class="md-3">
+                            <label>Hall Price and detail</label>
+                            <textarea [(ngModel)]="events.hall_description" name="halldetails" class="form-control"></textarea>
+                            <span *ngIf="errors.hall_description" class="text-danger">{{errors.hall_description}}</span> 
+                        </div>
+                        <div class="md-3">
+                            <label>FoodItem and detail</label>
+                            <textarea [(ngModel)]="events.food_description" name="foodetails" class="form-control"></textarea>
+                            <span *ngIf="errors.food_description" class="text-danger">{{errors.food_description}}</span>
+                        </div>
+                     </div>
+                    <div class="mb-3">
+                        <button type="submit" class="btn btn-primary">Update</button>
+                    </div>  
+                   
+                </form>
+            </div>   
+        </div>
+    </div>
+</div>
+
+

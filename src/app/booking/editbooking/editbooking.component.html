@@ -1,0 +1,198 @@
+<body [ngStyle]="{backgroundImage:'url(../assets/images/2.jpg)'}">
+
+    <br>
+    <br>
+<div>
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-header">
+                <h4>Booking Edit
+                    <a routerLink="/booking/adminbooking" class="btn btn-danger float-end">Back</a>
+                </h4>
+            </div>
+            <div class="card-body">
+                <form (ngSubmit)="updateBooking()">
+                    <div *ngIf="bookings">
+
+                        <div class="form-row">
+                        <div class="col-md-6">
+                            <label>Customer Name</label>
+                            <input type="text" [(ngModel)]="bookings.customer_name" name="customer_name" class="form-control">
+                            <span *ngIf="errors.customer_name" class="text-danger">{{errors.customer_name}}</span> 
+                        </div>
+        
+                            <div class="col-md-6">
+                            <label>Customer Email</label>
+                            <input type="email" [(ngModel)]="bookings.customer_email" name="customer_email" class="form-control">
+                            <span *ngIf="errors.customer_email" class="text-danger">{{errors.customer_email}}</span> 
+                        </div>
+                        </div>
+
+
+                       <div class="form-row">
+                    <div class="col-md-3">
+                            <label>Event Name</label>
+                            <br>
+                            <input type="radio" [(ngModel)]="bookings.event_name" name="event_name" value="Wedding" > Wedding <br>
+                            <input type="radio" [(ngModel)]="bookings.event_name" name="event_name" value="Reception" > Reception<br>
+                            <input type="radio" [(ngModel)]="bookings.event_name" name="event_name" value="Puberty Ceremony" > Puberty Ceremony
+                            <span *ngIf="errors.event_name" class="text-danger">{{errors.event_name}}</span>
+                        </div>
+                        
+                            <div class="col-md-3">
+                            <label>Event Date</label>
+                            <input type="date" [(ngModel)]="bookings.event_date" name="event_date" class="form-control">
+                            <span *ngIf="errors.event_date" class="text-danger">{{errors.event_date}}</span> 
+                        </div>
+    
+                            <div class="col-md-3">
+                            <label>Event Start Time</label>
+                            <input type="time" [(ngModel)]="bookings.event_start_time" name="event_start_time" class="form-control">
+                            <span *ngIf="errors.event_start_time" class="text-danger">{{errors.event_start_time}}</span> 
+                        </div>
+    
+                            <div class="col-md-3">
+                            <label>Event End Time</label>
+                            <input type="time" [(ngModel)]="bookings.event_end_time" name="event_end_time" class="form-control">
+                            <span *ngIf="errors.event_end_time" class="text-danger">{{errors.event_end_time}}</span> 
+                        </div>
+                        </div>
+
+                        <div class="form-row">
+                        <div class="col-md-6">
+                            <label>Advance Payment Date</label>
+                            <input type="date" [(ngModel)]="bookings.payment_date" name="payment_date" class="form-control">
+                            <span *ngIf="errors.payment_date" class="text-danger">{{errors.payment_date}}</span> 
+                        </div>
+        
+                            <div class="col-md-6">
+                            <label>Advance Payment Total</label>
+                            <input type="number" [(ngModel)]="bookings.payment_total" name="payment_total" class="form-control">
+                            <span *ngIf="errors.payment_total" class="text-danger">{{errors.payment_total}}</span>
+                        </div>
+                        </div>
+
+
+                        <div class="form-row">
+                        <div class="col-md-6">
+                            <label>Advance Payment Method</label>
+                            <br>
+                            <input type="radio" [(ngModel)]="bookings.payment_method" name="payment_method" value="cash deposit" > Cash Deposit <br>
+                            <input type="radio" [(ngModel)]="bookings.payment_method" name="payment_method" value="online payment" > Online Payment
+                            <span *ngIf="errors.payment_method" class="text-danger">{{errors.payment_method}}</span>
+                        </div>
+                        <div class="col-md-6">
+                            <form (ngSubmit)="saveImage()">
+                            <label>Upload Advance Payment Method File</label>
+                            <input type="file"  name="payment_method" id="formFile" class="form-control"  (change) = "imageUpload($event)">
+                            <span *ngIf="errors.payment_method" class="text-danger">{{errors.payment_method}}</span>
+            
+                            <!-- <button class="mb-2">Upload </button> -->
+                        </form>
+                        </div>
+                        </div>
+
+
+                        <div class="form-row">
+                            <div class="col-md-6">
+                                <label>Total Number of Guests</label>
+                                <input type="number" [(ngModel)]="bookings.total_guests" name="total_guests" class="form-control">
+                                <span *ngIf="errors.total_guests" class="text-danger">{{errors.total_guests}}</span>
+                            </div>
+                            </div>
+        
+                            <div class="form-row">
+                            <div class="col-md-6">
+                            <label>Food Package</label>
+                            <select class="form-select" [(ngModel)]="bookings.food" name="food">
+                                <option  value="Silver Package(Day)">Silver Package(Day)</option>
+                                <option  value="Gold Package(Day)">Gold Package(Day)</option>
+                                <option  value="Platinum Package(Day)">Platinum Package(Day)</option>
+                                <option  value="Silver Package(Night)">Silver Package(Night)</option>
+                                <option  value="Gold Package(Night)">Gold Package(Night)</option> 
+                            </select>
+                            <span *ngIf="errors.food" class="text-danger">{{errors.food}}</span> 
+                            </div>
+        
+        
+                            <div class="col-md-6">
+                                <label>Food Package Price(Per Person)</label>
+                                <select class="form-select" [(ngModel)]="bookings.food_price" name="food_price">
+                                    <option  value="600">600</option>
+                                    <option  value="900">900</option>
+                                    <option  value="1200">1200</option>
+                                    <option  value="650">650</option>
+                                    <option  value="850">850</option> 
+                                </select>
+                                <span *ngIf="errors.food_price" class="text-danger">{{errors.food_price}}</span> 
+                                </div>
+                            
+                            </div>
+        
+        
+                        <!-- <div class="col-md-6">
+                            <label>Food Package</label>
+                            <select class="form-select" [(ngModel)]="food" name="food">
+                                <option *ngFor = "let item of package" value="item">{{item}}</option>
+                            </select>
+                            <span *ngIf="errors.food" class="text-danger">{{errors.food}}</span> 
+                            </div>
+                        </div> -->
+        
+        
+        
+        
+        
+        
+        
+        
+        
+                            <div class="form-row">
+                                
+        
+                                    <div class="col-md-6">
+                                        <label>Photography Package</label>
+                                        <select class="form-select" [(ngModel)]="bookings.photography" name="photography" >
+                                            <option  value="Silver Package">Silver Package</option>
+                                            <option  value="Gold Package">Gold Package</option>
+                                            <option  value="Platinum Package">Platinum Package</option>
+                                            <option  value="Elegant Package">Elegant Package</option>
+                                            <option  value="Superior Package">Superior Package</option>  
+                                        </select>
+                                        <!-- <span *ngIf="errors.photography" class="text-danger">{{errors.photography}}</span> -->
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label>Photography Package Price</label>
+                                            <select class="form-select" [(ngModel)]="bookings.photography_price" name="photography_price" >
+                                                <option  value="90000">90000</option>
+                                                <option  value="100000">100000</option>
+                                                <option  value="120000">120000</option>
+                                                <option  value="130000">130000</option>
+                                                <option  value="150000">150000</option>  
+                                            </select>
+                                            <!-- <span *ngIf="errors.photography_price" class="text-danger">{{errors.photography_price}}</span> -->
+                                            </div>
+                                </div>
+        
+                        <div class="form-row">
+                            <div class="col-md-6">
+                                <label>Booking Status</label>
+                                <input type="text" [(ngModel)]="bookings.booking_status" name="booking_status" class="form-control" readonly>
+                                <span *ngIf="errors.booking_status" class="text-danger">{{errors.booking_status}}</span>
+                            </div>
+                        </div>
+        
+                     </div>
+                     <br>
+                    <div class="mb-3">
+                        <button type="submit" class="btn btn-warning">Update</button>
+                    </div>  
+                   
+                </form>
+            </div>   
+        </div>
+    </div>
+</div>
+</body>
+
+

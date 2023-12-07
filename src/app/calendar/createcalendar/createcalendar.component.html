@@ -1,0 +1,60 @@
+
+
+<body [ngStyle]="{backgroundImage:'url(../assets/images/2.jpg)'}">
+    <br>
+    <br>
+    <br>
+
+    <div>
+        <div class="container mt-5">
+            <div class="card">
+                <div class="card-header">
+                    <h4>Calendar Date Create
+                        <a routerLink="/calendar/admincalendar" class="btn btn-danger float-end">Back</a>
+                    </h4>
+                </div>
+                <div class="card-body">
+                    <form (ngSubmit)="saveCalendar()">
+
+                        <div class="mb-3">
+                            <!-- <label>Event Name</label>
+                            <input type="text" [(ngModel)]="event_name" name="event_name" class="form-control">
+                            <span *ngIf="errors.event_name" class="text-danger">{{errors.event_name}}</span> -->
+
+                            <label>Event Name</label>
+                        <br>
+                        <input type="radio" [(ngModel)]="event_name" name="event_name" value="Wedding" > Wedding <br>
+                        <input type="radio" [(ngModel)]="event_name" name="event_name" value="Reception" > Reception<br>
+                        <input type="radio" [(ngModel)]="event_name" name="event_name" value="Puberty Ceremony" > Puberty Ceremony
+                        <span *ngIf="errors.event_name" class="text-danger">{{errors.event_name}}</span>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label>Event Date</label>
+                            <input type="date" [(ngModel)]="event_date" name="event_date" class="form-control">
+                            <span *ngIf="errors.event_date" class="text-danger">{{errors.event_date}}</span>
+                        </div>
+                
+
+
+                        
+                        <div class="mb-3">
+                            <label>Color</label>
+                            <input type="color" [(ngModel)]="color" name="color" class="form-control">
+                            <span *ngIf="errors.color" class="text-danger">{{errors.color}}</span>
+                        </div>
+            
+                        
+
+                        <br>
+                        <div class="mb-3">
+                            <button type="submit" class="btn btn-warning">Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>   
+    </div>
+
+</body>
+

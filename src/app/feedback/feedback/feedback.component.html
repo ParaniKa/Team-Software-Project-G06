@@ -1,0 +1,104 @@
+
+<app-navbar></app-navbar>
+<body [ngStyle]="{backgroundImage:'url(../assets/images/2.jpg)'}">
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+		<title>CSS Responsive Contact Form With Google Map</title>
+		<link href="feedback.component.css" rel="stylesheet" type="text/css" />
+		
+	</head>
+	<body>
+		<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> Responsive Contact Us Form  | CodingLab </title>
+    <link rel="stylesheet" href="feedback.component.css">
+    <!-- Fontawesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	 <style>
+		body {
+		  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZIk1v6biSvYTqX6I-2bpFyIFXL3siKqtIMs5uwZDdaQZydZP0W_xS6AdZKCIjIo3sJNM&usqp=CAU"); 
+		  background-position: 50% 50%;
+		  background-repeat: repeat;
+		}
+		</style>
+   </head>
+<body>
+  <div class="container">
+    <div class="content">
+      <div class="left-side">
+        <img src="../assets/images/14.jpg" width="350" heght="1000" >
+      </div>
+      <div class="right-side">
+        <div class="topic-text">Drop Us Your Feedback</div>
+        <p>The wedding venue is the cornerstone of your dream wedding. It's our pleasure to know your feedback.</p>
+      <form action="https://formsubmit.co/nadarajaparameswaryweddinghall@gmail.com" method="post" (ngSubmit)="saveFeedback()">
+        <div class="input-box">
+          <input type="text" [(ngModel)]="name" name="name" placeholder="Enter your name">
+          <span *ngIf="errors.name" class="text-danger">{{errors.name}}</span>
+        </div>
+        <br>
+        <div class="input-box">
+          <input type="text" [(ngModel)]="email" name="email" placeholder="Enter your email">
+          <span *ngIf="errors.email" class="text-danger">{{errors.email}}</span>
+        </div>
+        <br>
+
+        <div class="input-box">
+          <input type="text" [(ngModel)]="mobilenumber" name="mobilenumber" placeholder="Enter your Mobile No">
+          <span *ngIf="errors.mobilenumber" class="text-danger">{{errors.mobilenumber}}</span>
+        </div>
+        <br>
+
+
+        <div class="input-box message-box">
+			<input type="text" [(ngModel)]="message" name="message" placeholder="Enter your message">
+      <span *ngIf="errors.message" class="text-danger">{{errors.message}}</span>
+        </div>
+        <br>
+
+        <div class="input-box">
+          <input type="date" [(ngModel)]="posting_date" name="posting_date" placeholder="Posting Date">
+          <span *ngIf="errors.posting_date" class="text-danger">{{errors.posting_date}}</span>
+        </div>
+        <br>
+        
+        <!-- <div class="button">
+          <input type="button" value="Send Now" >
+        </div> -->
+
+        <div class="mb-12">
+          <button type="submit" class="btn btn-primary ">Send Now</button>
+      </div>
+
+      </form>
+    </div>
+    </div>
+  </div>
+</body>
+</html>
+			
+	</body>
+
+
+  <br>
+<br>
+<br>
+<br>
+
+
+<app-footer></app-footer>

@@ -1,0 +1,41 @@
+<body [ngStyle]="{backgroundImage:'url(../assets/images/2.jpg)'}">
+    <br>
+    <br>
+    <br>
+
+<div>
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-header">
+                <h4>Photography & Videography Package Create
+                    <a routerLink="/photography/adminphotography" class="btn btn-danger float-end">Back</a>
+                </h4>
+            </div>
+            <div class="card-body">
+                <form (ngSubmit)="savePhotography()">
+                    <div class="md-3">
+                        <label>Package</label>
+                        <input type="text" [(ngModel)]="package" name="package" class="form-control">
+                        <span *ngIf="errors.package" class="text-danger">{{errors.package}}</span>
+                    </div>
+                    <div class="md-3">
+                        <label>Package Details </label>
+                        <textarea [(ngModel)]="details" name="details" class="form-control"></textarea>
+                        <span *ngIf="errors.details" class="text-danger">{{errors.details}}</span>
+                    </div>
+                    <div class="md-3">
+                        <label>Price</label>
+                        <input type="number" [(ngModel)]="price" name="price" class="form-control">
+                        <span *ngIf="errors.price" class="text-danger">{{errors.price}}</span>
+                    </div>
+                    <br>
+                    <div class="mb-3">
+                        <button type="submit" class="btn btn-warning">Save</button>
+                    </div>
+                </form>
+            </div>
+    </div>
+</div>
+
+<body>
+

@@ -1,0 +1,174 @@
+<body [ngStyle]="{backgroundImage:'url(../assets/images/2.jpg)'}">
+
+    <br>
+    <br>
+<div>
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-header">
+                <h4>Booking View
+                    <a routerLink="/booking/adminbooking" class="btn btn-danger float-end">Back</a>
+                </h4>
+            </div>
+            <div class="card-body">
+                <form (ngSubmit)="updateBooking()">
+                    <div *ngIf="bookings">
+
+                            <div class="form-row">
+                                <label for="staticEmail" class="col-sm-6 col-form-label">Customer Name</label>
+                                 <div class="col-sm-6">  
+                                    <input type="text" [(ngModel)]="bookings.customer_name" name="customer_name" class="form-control-plaintext">
+                                </div>
+                                 <span *ngIf="errors.customer_name" class="text-danger">{{errors.customer_name}}</span>
+                            </div>
+
+
+                            <div class="form-row">
+                                <label for="staticEmail" class="col-sm-6 col-form-label">Customer Email</label>
+                                <div class="col-sm-6">
+                                    <input type="email" [(ngModel)]="bookings.customer_email" name="customer_email" class="form-control-plaintext">
+                                </div>
+                                    <span *ngIf="errors.customer_email" class="text-danger">{{errors.customer_email}}</span> 
+                            </div>
+
+
+                            <div class="form-row">
+                                <label for="staticEmail" class="col-sm-6 col-form-label">Event Name</label>
+                                <div class="col-sm-6">
+                                    <input type="text" [(ngModel)]="bookings.event_name" name="event_name" class="form-control-plaintext">
+                                </div>
+                                <span *ngIf="errors.event_name" class="text-danger">{{errors.event_name}}</span>
+                            </div>
+
+
+                            <div class="form-row">
+                                <label for="staticEmail" class="col-sm-6 col-form-label">Event Date</label>
+                                <div class="col-sm-6">
+                                    <input type="text" [(ngModel)]="bookings.event_date" name="event_date" class="form-control-plaintext">
+                                </div>
+                                    <span *ngIf="errors.event_date" class="text-danger">{{errors.event_date}}</span> 
+                            </div>
+
+
+    
+                            <div class="form-row">
+                                <label for="staticEmail" class="col-sm-6 col-form-label">Event Start Time</label>
+                                <div class="col-sm-6">
+                                    <input type="text" [(ngModel)]="bookings.event_start_time" name="event_start_time" class="form-control-plaintext">
+                                </div>
+                                    <span *ngIf="errors.event_start_time" class="text-danger">{{errors.event_start_time}}</span> 
+                            </div>
+    
+
+                            <div class="form-row">
+                                <label for="staticEmail" class="col-sm-6 col-form-label">Event End Time</label>
+                                <div class="col-sm-6">
+                                    <input type="text" [(ngModel)]="bookings.event_end_time" name="event_end_time" class="form-control-plaintext">
+                                </div>
+                                <span *ngIf="errors.event_end_time" class="text-danger">{{errors.event_end_time}}</span> 
+                        </div>
+
+
+                        <div class="form-row">
+                            <label for="staticEmail" class="col-sm-6 col-form-label">Advance Payment Date</label>
+                            <div class="col-sm-6">
+                                <input type="text" [(ngModel)]="bookings.payment_date" name="payment_date" class="form-control-plaintext">
+                            </div>
+                            <span *ngIf="errors.payment_date" class="text-danger">{{errors.payment_date}}</span> 
+                        </div>
+    
+                        <div class="form-row">
+                            <label for="staticEmail" class="col-sm-6 col-form-label">Advance Payment Total</label>
+                            <div class="col-sm-6">
+                                <input type="text" [(ngModel)]="bookings.payment_total" name="payment_total" class="form-control-plaintext">
+                            </div>
+                            <span *ngIf="errors.payment_total" class="text-danger">{{errors.payment_total}}</span>
+                        </div>
+
+                        <div class="form-row">
+                            <label for="staticEmail" class="col-sm-6 col-form-label">Advance Payment Method</label>
+                            <div class="col-sm-6">
+                                <input type="text" [(ngModel)]="bookings.payment_method" name="payment_method" class="form-control-plaintext">
+                            </div> 
+                            <span *ngIf="errors.payment_method" class="text-danger">{{errors.payment_method}}</span>
+                        </div>
+
+
+
+                        <div class="form-row">
+                            <label for="staticEmail" class="col-sm-6 col-form-label">Advance Payment Method File</label>
+                            <div class="col-sm-6">
+                                <input type="text" name="payment_method" class="form-control-plaintext" value="file.pdf" >
+                            </div> 
+                            <span *ngIf="errors.payment_method" class="text-danger">{{errors.payment_method}}</span>
+                        </div>
+
+
+
+                        <div class="form-row">
+                            <label for="staticEmail" class="col-sm-6 col-form-label">Total Number of Guests</label>
+                                <div class="col-sm-6">
+                                <input type="number" [(ngModel)]="bookings.total_guests" name="total_guests" class="form-control-plaintext">
+                                </div>
+                                <span *ngIf="errors.total_guests" class="text-danger">{{errors.total_guests}}</span>
+                            </div>
+
+                            <div class="form-row">
+                            <label for="staticEmail" class="col-sm-6 col-form-label">Food Package</label>
+                            <div class="col-sm-6">
+                            <input type="text" [(ngModel)]="bookings.food" name="food" class="form-control-plaintext">
+                            </div>
+                            <span *ngIf="errors.food" class="text-danger">{{errors.food}}</span> 
+                            </div>
+        
+        
+                            <div class="form-row">
+                                <label for="staticEmail" class="col-sm-6 col-form-label">Food Package Price</label>
+                                <div class="col-sm-6">
+                                <input type="text" [(ngModel)]="bookings.food_price" name="food_price" class="form-control-plaintext">
+                                </div>
+                                <span *ngIf="errors.food_price" class="text-danger">{{errors.food_price}}</span> 
+                                </div>
+
+
+        
+                            <div class="form-row">
+                            <label for="staticEmail" class="col-sm-6 col-form-label">Photography Package</label>
+                                    <div class="col-sm-6">
+                                    <input type="text" [(ngModel)]="bookings.photography" name="photography" class="form-control-plaintext">
+                                    </div>
+                                    <!-- <span *ngIf="errors.photography" class="text-danger">{{errors.photography}}</span> -->
+                                </div>
+
+
+                                <div class="form-row">
+                                    <label for="staticEmail" class="col-sm-6 col-form-label">Photography Package Price</label>
+                                            <div class="col-sm-6">
+                                            <input type="text" [(ngModel)]="bookings.photography_price" name="photography_price" class="form-control-plaintext">
+                                            </div>
+                                            <!-- <span *ngIf="errors.photography" class="text-danger">{{errors.photography}}</span> -->
+                                        </div>
+
+
+
+
+                        <div class="form-row">
+                            <label for="staticEmail" class="col-sm-6 col-form-label">Booking Status</label>
+                            <div class="col-sm-6">
+                                <input type="text" [(ngModel)]="bookings.booking_status" name="booking_status" class="form-control-plaintext" readonly>
+                            </div>
+                            <span *ngIf="errors.booking_status" class="text-danger">{{errors.booking_status}}</span>
+                        </div>
+
+                     </div>
+                     <br>
+                   
+                </form>
+            </div>   
+        </div>
+    </div>
+</div>
+</body>
+
+
+

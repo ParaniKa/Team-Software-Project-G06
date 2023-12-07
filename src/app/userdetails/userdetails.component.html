@@ -1,0 +1,272 @@
+ <!-- <div class="container">
+    <div class="d-flex justify-content-center mt-5" *ngIf="user">
+      <div class="card">
+        <h5 class="card-header">Customer Details</h5>
+        <div class="card-body">
+          <h5 class="card-title">Name:{{user.name}}</h5>
+          <br>
+          <p class="card-text">Email: {{user.email}}</p>
+          <p class="card-text">Created_At : {{user.created_at}}</p>
+          <a routerLink='/logout' class="btn btn-info">Logout</a>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+
+
+    <!-- <body [ngStyle]="{backgroundImage:'url(../assets/images/2.jpg)'}">
+    <div class="sidebar" >
+        <div class="logo"></div>
+
+          <h5 class="card-header">Customer Details</h5>
+  
+            <h5 class="card-title">Name:{{user.name}}</h5>
+            <br>
+            <p class="card-text">Email: {{user.email}}</p>
+            <p class="card-text">Created_At : {{user.created_at}}</p>
+             <a routerLink='/logout' class="btn btn-info">Logout</a>
+
+
+        <ul class="menu">
+            <li class="active">
+                <a routerLink="/admindashboard" >
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+
+            <li>
+                <a routerLink="/view-user">
+                    <i class="fas fa-user"></i>
+                    <span>Users</span>
+                </a>
+            </li>
+
+            <li>
+                <a routerLink="/view-booking">
+                    <i class="fas fa-book"></i>
+                    <span>Booking List</span>
+                </a>
+            </li>
+
+            <li>
+                <a routerLink="/view-contact-quarry">
+                    <i class="fa fa-address-card"></i>
+                    <span>Contact Us</span>
+                </a>
+            </li>
+
+            <li>
+                <a routerLink="/view-feedback">
+                    <i class="fas fa-calendar"></i>
+                    <span>Feedback</span>
+                </a>
+            </li>
+
+            
+
+            
+
+            <li class="logout">
+                <a routerLink="/view-subscribe">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>LogOut</span>
+                </a>
+            </li> 
+        </ul>
+</div>
+  </body>
+ -->
+
+ <body [ngStyle]="{backgroundImage:'url(../assets/images/2.jpg)'}">
+    <div class="sidebar" >
+        <div class="logo"></div>
+
+
+        <div class="user--info">
+            <span class="user-name">
+                <strong>Name:{{user.name}}</strong>
+            </span>
+            <br>
+            <span class="user-name">
+                <strong>Email: {{user.email}}</strong>
+            </span>
+            <br>
+            <span class="user-name">
+                <strong>Address: {{user.address}}</strong>
+            </span>
+            <br>
+            <span class="user-name">
+                <strong>Mobile No: {{user.mobilenumber}}</strong>
+            </span>
+        </div>
+
+        <br>
+
+        <ul class="menu">
+            <li class="active">
+                <a routerLink="/userprofile">
+                    <i class="fas fa-book"></i>
+                    <span>Booking Form</span>
+                </a>
+            </li>
+
+  
+            <li>
+                <a routerLink="/auspicious/auspicious">
+                    <i class="fa fa-clock-o"></i>
+                    <span>Auspicious Time</span>
+                </a>
+            </li>
+  
+            <li>
+                <a routerLink="/calendar/calendar">
+                    <i class="fas fa-calendar"></i>
+                    <span>Calendar</span>
+                </a>
+            </li>
+  
+            <li>
+                <a routerLink="/logout">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>LogOut</span>
+                </a>
+            </li> 
+        </ul>
+    </div>
+  
+     <div class="main--content">
+        <div class="header--wrapper">
+            <div class="header--title">
+                <h3>Customer Profile</h3>
+                <h3></h3>
+            </div>
+        </div>
+            
+            <!-- <div class="user--info">
+                <span class="user-name">
+                    <strong>Name:{{user.name}}</strong>
+                </span>
+                <br>
+                <span class="user-name">
+                    <strong>Email: {{user.email}}</strong>
+                </span>
+            </div> -->
+           
+
+
+
+
+         
+        
+        
+  
+  
+  
+         
+          <app-booking></app-booking>
+  
+  
+              <br>
+              <br> 
+              <br>
+              <br>
+              <br> 
+              <br>
+              <br>
+              <br> 
+              <br>
+              <br>
+              <br> 
+              <br>
+              <br>
+              <br>
+              <br>
+
+  
+          <!-- footer -->
+        <section class="footer-top">
+          <div class="cont">
+              <div class="row">
+                  <div class="col-md-4">
+                      <div class="footer-all-menu">
+                          <h2>Quick Links</h2>
+                          <ul>
+                              <li>
+                                  <i class="fa fa-circle"></i>
+                                  <a routerLink="">Home</a>
+                              </li>
+                              <li>
+                                  <i class="fa fa-circle"></i>
+                                  <a routerLink="/gallery">Gallery</a>
+                              </li>
+                              <li>
+                                  <i class="fa fa-circle"></i>
+                                  <a routerLink="/aboutus">About us</a>
+                              </li>
+                              <li>
+                                  <i class="fa fa-circle"></i>
+                                  <a routerLink="/feedback">Feedback</a>
+                              </li>
+                              <li>
+                                  <i class="fa fa-circle"></i>
+                                  <a routerLink="/contactus">Contact us</a>
+                              </li>
+                              
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="col-md-4">
+                      <div class="footer-all-menu">
+                          <h2>Services</h2>
+                          <ul>
+                              <li>
+                                  <i class="fa fa-circle"></i>
+                                  <a routerLink="/fooditem">Food Item</a>
+                              </li>
+                              <li>
+                                  <i class="fa fa-circle"></i>
+                                  <a routerLink="/gallery">Photography & Videography</a>
+                              </li>
+                              <!-- <li>
+                                  <i class="fa fa-circle"></i>
+                                  <a routerLink="/beautician">Beautician</a>
+                              </li>
+                              <li>
+                                  <i class="fa fa-circle"></i>
+                                  <a routerLink="/vehicle">car & Vehicles</a>
+                              </li> -->
+                              
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="col-md-3">
+                      <div class="footer-all-menu">
+                          <h2>Events</h2>
+                          <ul>
+                              <li>
+                                  <i class="fa fa-circle"></i>
+                                  <a routerLink="">Wedding</a>
+                              </li>
+                              <li>
+                                  <i class="fa fa-circle"></i>
+                                  <a routerLink="menu">Reception</a>
+                              </li>
+                              <li>
+                                  <i class="fa fa-circle"></i>
+                                  <a routerLink="gallery">Puberty Ceremony</a>
+                              </li> 
+                          </ul>
+                      </div>
+                  </div>
+              </div>  
+          </div>
+      </section>
+      
+  
+  
+    </div>
+  </body>
+  
+

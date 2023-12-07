@@ -1,0 +1,247 @@
+<body [ngStyle]="{backgroundImage:'url(../assets/images/2.jpg)'}">
+    <div class="sidebar" >
+        <div class="logo"></div>
+        <ul class="menu">
+            <li >
+                <a routerLink="/admindashboard" >
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+  
+            <li>
+                <a routerLink="/user/adminuser">
+                    <i class="fas fa-user"></i>
+                    <span>Users</span>
+                </a>
+            </li>
+  
+            <li>
+                <a routerLink="/booking/adminbooking">
+                    <i class="fas fa-book"></i>
+                    <span>Booking List</span>
+                </a>
+            </li>
+  
+            <li class="active">
+                <a routerLink="/contact/admincontact">
+                    <i class="fa fa-address-card"></i>
+                    <span>Contact Us</span>
+                </a>
+            </li>
+  
+            <li>
+                <a routerLink="/feedback/adminfeedback">
+                    <i class="fas fa-calendar"></i>
+                    <span>Feedback</span>
+                </a>
+            </li>
+  
+            <!-- <li>
+                <a routerLink="/event">
+                    <i class="fa fa-gift"></i>
+                    <span>Events</span>
+                </a>
+            </li>
+   -->
+            <li>
+                <a routerLink="/food/adminfood">
+                    <i class="fa fa-cutlery"></i>
+                    <span>Food Item</span>
+                </a>
+            </li>
+  
+            <li>
+                <a routerLink="/photography/adminphotography">
+                    <i class="fas fa-camera"></i>
+                    <span>Photography & Videography</span>
+                </a>
+            </li>
+            
+            <li>
+                <a routerLink="/subscriber/adminsubscriber">
+                    <i class="fas fa-folder"></i>
+                    <span>Subscriber</span>
+                </a>
+            </li> 
+  
+            <li>
+              <a routerLink="/auspicious/adminauspicious">
+                  <i class="fa fa-clock-o"></i>
+                  <span>Auspicious Time</span>
+              </a>
+          </li>
+  
+          <!-- <li>
+              <a routerLink="/calendar/admincalendar">
+                  <i class="fas fa-calendar"></i>
+                  <span>Calendar</span>
+              </a>
+          </li> -->
+  
+            <li >
+                <a routerLink="/logout">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>LogOut</span>
+                </a>
+            </li> 
+        </ul>
+    </div>
+  
+    <div class="main--content">
+        <div class="header--wrapper">
+            <div class="header--title">
+                <h3>Admin</h3>
+                <h2>Dashboard</h2>
+            </div>
+            <div class="user--info">
+                <span class="user-name">
+                    <strong>Name:{{user.name}}</strong>
+                </span>
+                <br>
+                <span class="user-name">
+                    <strong>Email: {{user.email}}</strong>
+                </span>
+            </div>
+          </div>
+  
+  
+  
+  
+          <div>
+            <div class="mt-5 container">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Contact Us List
+                            <!-- <a routerLink="/createevent" class="btn btn-primary float-end">Add Events</a> -->
+                        </h4>
+                    </div>
+                <div class="card-body">
+                    <table class="table table-striped table-bordered">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Mobile Number</th>
+                                <th>Message</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor = "let item of this.contacts">
+                                <td>{{item.id}}</td>
+                                <td>{{item.name}}</td>
+                                <td>{{item.email}}</td>
+                                <td>{{item.mobilenumber}}</td>
+                                <td>{{item.message}}</td>
+                                <td>
+                                    <!-- <a routerLink = "/{{item.id}}/edit" class="btn btn-success">Edit</a> -->
+                                    <button type="button" (click)="deleteContact($event,item.id)" class="btn btn-danger">Delete</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>    
+                </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+          
+  
+          <!-- footer -->
+        <!-- <section class="footer-top">
+          <div class="cont">
+              <div class="row">
+                  <div class="col-md-4">
+                      <div class="footer-all-menu">
+                          <h2>Quick Links</h2>
+                          <ul>
+                              <li>
+                                  <i class="fa fa-circle"></i>
+                                  <a routerLink="">Home</a>
+                              </li>
+                              <li>
+                                  <i class="fa fa-circle"></i>
+                                  <a routerLink="/gallery">Gallery</a>
+                              </li>
+                              <li>
+                                  <i class="fa fa-circle"></i>
+                                  <a routerLink="/aboutus">About us</a>
+                              </li>
+                              <li>
+                                  <i class="fa fa-circle"></i>
+                                  <a routerLink="/feedback">Feedback</a>
+                              </li>
+                              <li>
+                                  <i class="fa fa-circle"></i>
+                                  <a routerLink="/contactus">Contact us</a>
+                              </li>
+                              
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="col-md-4">
+                      <div class="footer-all-menu">
+                          <h2>Services</h2>
+                          <ul>
+                              <li>
+                                  <i class="fa fa-circle"></i>
+                                  <a routerLink="/fooditem">Food Item</a>
+                              </li>
+                              <li>
+                                  <i class="fa fa-circle"></i>
+                                  <a routerLink="/gallery">Photographers & Studio</a>
+                              </li>
+                               <li>
+                                  <i class="fa fa-circle"></i>
+                                  <a routerLink="/beautician">Beautician</a>
+                              </li>
+                              <li>
+                                  <i class="fa fa-circle"></i>
+                                  <a routerLink="/vehicle">car & Vehicles</a>
+                              </li> 
+                              
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="col-md-3">
+                      <div class="footer-all-menu">
+                          <h2>Events</h2>
+                          <ul>
+                              <li>
+                                  <i class="fa fa-circle"></i>
+                                  <a routerLink="">Wedding</a>
+                              </li>
+                              <li>
+                                  <i class="fa fa-circle"></i>
+                                  <a routerLink="menu">Reception</a>
+                              </li>
+                              <li>
+                                  <i class="fa fa-circle"></i>
+                                  <a routerLink="gallery">Puberty Ceremony</a>
+                              </li> 
+                          </ul>
+                      </div>
+                  </div>
+              </div>  
+          </div>
+      </section>
+       -->
+  
+  
+    </div>
+  </body>
+  
+

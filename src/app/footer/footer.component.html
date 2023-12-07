@@ -1,0 +1,124 @@
+<section class="footer-top">
+    <div class="cont">
+        <div class="row">
+            <div class="col-md-4">
+                <h2>Contact Information</h2>
+                <div class="footer-top-menu">
+                    <ul>
+                        <li>
+                            <i class="fa fa-home"></i>
+                            <span class="heading">Address:</span>
+                            <span class="address">Nadaraja Parameswary Wedding Hall,AB20,Nallur,Jaffna</span>
+                        </li>
+                        <li>
+                            <i class="fa fa-envelope"></i>
+                            <span class="heading">Mail Us:</span>
+                            <span class="email">
+                                <a href="mailto:NadarajaParameswaryWeddingHall@gmail.com">NadarajaParameswaryWeddingHall@gmail.com</a>
+                            </span>
+                         </li>
+                         <li>
+                            <i class="fa fa-phone"></i>
+                            <span class="heading">Phone:</span>
+                            <span class="number">
+                                <a href="tel:+94212221662">+94212221662</a>
+                            </span>
+                         </li>
+                    </ul>
+                </div>
+             </div>
+            <div class="col-md-3">
+                <div class="footer-all-menu">
+                    <h2>Quick Links</h2>
+                    <ul>
+                        <li>
+                            <i class="fa fa-circle"></i>
+                            <a routerLink="">Home</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-circle"></i>
+                            <a routerLink="/gallery">Gallery</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-circle"></i>
+                            <a routerLink="/aboutus">About us</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-circle"></i>
+                            <a routerLink="/feedback/feedback">Feedback</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-circle"></i>
+                            <a routerLink="/contact/contact">Contact us</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="footer-all-menu">
+                    <h2>Services</h2>
+                    <ul>
+                        <li>
+                            <i class="fa fa-circle"></i>
+                            <a routerLink="/food/food">Food Item</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-circle"></i>
+                            <a routerLink="/photography/photography">Photography & Videography</a>
+                        </li>
+                        <!-- <li>
+                            <i class="fa fa-circle"></i>
+                            <a routerLink="/beautician">Beautician</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-circle"></i>
+                            <a routerLink="/vehicle">car & Vehicles</a>
+                        </li> -->
+                        
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="footer-all-menu">
+                    <h2>Events</h2>
+                    <ul>
+                        <li>
+                            <i class="fa fa-circle"></i>
+                            <a routerLink="">Wedding</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-circle"></i>
+                            <a routerLink="">Reception</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-circle"></i>
+                            <a routerLink="">Puberty Ceremony</a>
+                        </li> 
+                    </ul>
+                </div>
+            </div>
+        </div>  
+    </div>
+</section>
+
+
+
+<form (ngSubmit)="saveSubscribe()">
+<section class="footer-middle">
+    <div class="cont">
+        <div class="row">
+            <div class ="col-md-6">
+                <h2>Enter your Email Address for Events and News</h2>
+            </div>
+        
+            <div class ="col-md-6">
+                <span *ngIf="errors.email" class="text-danger">{{errors.email}}</span>
+                 <input type="mail" [(ngModel)]="email" name="email" class="input" placeholder="Email">
+                 <button type="submit" class="btn"><i class="fa fa-location-arrow"></i></button>
+                 
+            </div>
+        </div>
+    </div>
+</section>
+<form>

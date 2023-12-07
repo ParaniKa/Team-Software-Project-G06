@@ -1,0 +1,97 @@
+
+<app-navbar></app-navbar>
+
+<section class ="banner" data-bs-ride="true">
+    <owl-carousel-o [options]="bannerslider" >
+      <ng-template carouselSlide>
+        <img src="../assets/images/homepage1.jpg" alt="Banner">
+      </ng-template>  
+      <ng-template carouselSlide><img src="../assets/images/homepage2.jpg" alt="Banner">
+        <!-- <ng-template carouselSlide><img src="../assets/images/hall2.jpg" alt="Banner"> -->
+      </ng-template>  
+      <ng-template carouselSlide><img src="../assets/images/homepage3.jpg" alt="Banner">
+      </ng-template>  
+      <ng-template carouselSlide>
+        <img src="../assets/images/banner5.jpg" alt="Banner">
+      </ng-template> 
+    </owl-carousel-o>
+    </section>
+
+<br>
+<br>
+<br>
+
+  <section class="services top">
+    <div class="container">
+        <div class="heading text-center">
+            <h1>Our Services</h1>
+            <!-- <h2>Our Services</h2> -->
+            <p>We serve delicious food at your event, ensuring your guests have a tasty and memorable dining experience on your big day.
+              We take pictures and record videos, helping you capture and remember important moments in your life. We make sure your memories are preserved beautifully.
+        </div>
+
+        <div class="content flex_space">
+          <div class="left grid2">
+            <div class="box">
+              <div class="text">
+                <i class ="fa fa-cutlery"  routerLink="/food/food"></i>
+                <h3 routerLink="/food/food">Delicious Food</h3>
+              </div>
+            </div>
+            <div class="box">
+              <div class="text">
+                <i class="fas fa-camera" routerLink="/photography/photography"></i>
+                <h3 routerLink="/photography/photography">Photography & Videography</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+
+<br>
+<br>
+<br>
+
+   <section class="events">
+    <h1 class="headings">Events</h1>
+    <div class="service-slider">
+      
+      <div class="row" >
+        <div class="col-md-4">
+        <div class="slide">
+          <img src="../assets/images/image.jpg" alt="">
+          <div class="content">
+            <h3>Wedding</h3>
+          </div>
+        </div>
+        </div>
+
+        <div class="col-md-4">
+        <div class="slide">
+          <img src="../assets/images/reception.jpg" alt="">
+          <div class="content">
+            <h3>Reception</h3>
+          </div>
+        </div>
+        </div>
+
+        <div class="col-md-4">
+        <div class="slide">
+          <img src="../assets/images/puberty1.jpg" alt="">
+          <div class="content">
+            <h3>Puberty Ceremony</h3>
+          </div>
+        </div>
+        </div>
+
+      
+      </div>
+    </div>
+   </section>
+      
+    
+
+
+   <app-footer></app-footer>

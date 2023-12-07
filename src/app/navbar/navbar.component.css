@@ -1,0 +1,25 @@
+.navbar{
+    box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.08); 
+    background-color: #f9bf00;
+}
+.navbar-brand{
+    font-weight: 1000;
+    font-size: 30px;
+    color: #092032;
+}
+.navbar .navbar-nav .nav-link:hover{
+color: #ff4d29;
+}
+
+.nav-item{
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.nav-link.active-link{
+    color:#ff4d29; 
+    text-decoration:underline;
+}
+/* .navbar .navbar-nav .nav-link{
+    color: rgb(23, 11, 0);
+} */

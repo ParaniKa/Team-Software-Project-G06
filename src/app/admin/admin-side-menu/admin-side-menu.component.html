@@ -1,0 +1,184 @@
+<!-- <app-navbar></app-navbar> -->
+
+<body [ngStyle]="{backgroundImage:'url(../assets/images/2.jpg)'}">
+    <div class="sidebar" >
+        <div class="logo"></div>
+        <ul class="menu">
+            <li class="active">
+                <a routerLink="/admindashboard" >
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+
+            <li>
+                <a routerLink="/view-user">
+                    <i class="fas fa-user"></i>
+                    <span>Users</span>
+                </a>
+            </li>
+
+            <li>
+                <a routerLink="/view-booking">
+                    <i class="fas fa-book"></i>
+                    <span>Booking List</span>
+                </a>
+            </li>
+
+            <li>
+                <a routerLink="/view-contact-quarry">
+                    <i class="fa fa-address-card"></i>
+                    <span>Contact Us</span>
+                </a>
+            </li>
+
+            <li>
+                <a routerLink="/view-feedback">
+                    <i class="fas fa-calendar"></i>
+                    <span>Feedback</span>
+                </a>
+            </li>
+
+            <li>
+                <a routerLink="/event">
+                    <i class="fa fa-gift"></i>
+                    <span>Events</span>
+                </a>
+            </li>
+
+            <li>
+                <a routerLink="/view-feedback">
+                    <i class="fa fa-cutlery"></i>
+                    <span>Food Item</span>
+                </a>
+            </li>
+
+            <li>
+                <a routerLink="/view-feedback">
+                    <i class="fas fa-camera"></i>
+                    <span>Photographers & Studio</span>
+                </a>
+            </li>
+            
+            <li>
+                <a routerLink="/view-subscribe">
+                    <i class="fas fa-folder"></i>
+                    <span>Subscribe</span>
+                </a>
+            </li> 
+
+            <li class="logout">
+                <a routerLink="/view-subscribe">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>LogOut</span>
+                </a>
+            </li> 
+        </ul>
+    </div>
+
+    <div class="main--content">
+        <div class="header--wrapper">
+            <div class="header--title">
+                <h3>Admin</h3>
+                <h2>Dashboard</h2>
+            </div>
+            <div class="user--info">
+                <span class="user-name">
+                    <strong>Name:{{user.name}}</strong>
+                </span>
+                <br>
+                <span class="user-name">
+                    <strong>Email: {{user.email}}</strong>
+                </span>
+            </div>
+
+        </div>
+
+
+
+
+
+        
+         <!-- footer -->
+      <section class="footer-top">
+        <div class="cont">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="footer-all-menu">
+                        <h2>Quick Links</h2>
+                        <ul>
+                            <li>
+                                <i class="fa fa-circle"></i>
+                                <a routerLink="">Home</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-circle"></i>
+                                <a routerLink="/gallery">Gallery</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-circle"></i>
+                                <a routerLink="/aboutus">About us</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-circle"></i>
+                                <a routerLink="/feedback">Feedback</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-circle"></i>
+                                <a routerLink="/contactus">Contact us</a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="footer-all-menu">
+                        <h2>Services</h2>
+                        <ul>
+                            <li>
+                                <i class="fa fa-circle"></i>
+                                <a routerLink="/fooditem">Food Item</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-circle"></i>
+                                <a routerLink="/gallery">Photographers & Studio</a>
+                            </li>
+                            <!-- <li>
+                                <i class="fa fa-circle"></i>
+                                <a routerLink="/beautician">Beautician</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-circle"></i>
+                                <a routerLink="/vehicle">car & Vehicles</a>
+                            </li> -->
+                            
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="footer-all-menu">
+                        <h2>Events</h2>
+                        <ul>
+                            <li>
+                                <i class="fa fa-circle"></i>
+                                <a routerLink="">Wedding</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-circle"></i>
+                                <a routerLink="menu">Reception</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-circle"></i>
+                                <a routerLink="gallery">Puberty Ceremony</a>
+                            </li> 
+                        </ul>
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </section>
+    
+
+    </div>
+    
+</body>

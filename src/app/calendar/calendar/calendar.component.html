@@ -1,0 +1,192 @@
+<body [ngStyle]="{backgroundImage:'url(../assets/images/2.jpg)'}">
+    <div class="sidebar" >
+        <div class="logo"></div>
+
+
+        <div class="user--info">
+            <span class="user-name">
+                <strong>Name:{{user.name}}</strong>
+            </span>
+            <br>
+            <span class="user-name">
+                <strong>Email: {{user.email}}</strong>
+            </span>
+            <br>
+            <span class="user-name">
+                <strong>Address: {{user.address}}</strong>
+            </span>
+            <br>
+            <span class="user-name">
+                <strong>Mobile No: {{user.mobilenumber}}</strong>
+            </span>
+        </div>
+
+        <br>
+
+        <ul class="menu">
+            <li>
+                <a routerLink="/userprofile">
+                    <i class="fas fa-book"></i>
+                    <span>Booking Form</span>
+                </a>
+            </li>
+
+  
+            <li>
+                <a routerLink="/auspicious/auspicious">
+                    <i class="fa fa-clock-o"></i>
+                    <span>Auspicious Time</span>
+                </a>
+            </li>
+  
+            <li class="active">
+                <a routerLink="/calendar/calendar">
+                    <i class="fas fa-calendar"></i>
+                    <span>Calendar</span>
+                </a>
+            </li>
+  
+            <li>
+                <a routerLink="/logout">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>LogOut</span>
+                </a>
+            </li> 
+        </ul>
+    </div>
+  
+     <div class="main--content">
+        <div class="header--wrapper">
+            <div class="header--title">
+                <h3>Customer Profile</h3>
+                <h3></h3>
+            </div>
+        </div>
+            
+            <!-- <div class="user--info">
+                <span class="user-name">
+                    <strong>Name:{{user.name}}</strong>
+                </span>
+                <br>
+                <span class="user-name">
+                    <strong>Email: {{user.email}}</strong>
+                </span>
+            </div> -->
+           
+
+
+
+
+         
+            <div class="container text-center">
+        
+                <full-calendar
+                    [options]="calendarOptions" 
+                    [events] = "[
+                            {title: 'Wedding', date:'2023-11-14', color:'#0b12da'},
+                            {title: 'PubertyCeremony', date:'2023-11-22', color:'#5bd129'},
+                            {title: 'Wedding', date:'2023-11-27', color:'#c92c80'},
+                            {title: 'PubertyCeremony', date:'2023-11-30', color:'#f44910'},
+                            {title: 'Wedding', date:'2023-11-29', color:'purple'},
+                            ]"
+        
+                     >
+            
+                </full-calendar>
+            </div>
+        
+  
+  
+  
+         
+          
+  
+  
+               
+
+
+  
+          <!-- footer -->
+        <section class="footer-top">
+          <div class="cont">
+              <div class="row">
+                  <div class="col-md-4">
+                      <div class="footer-all-menu">
+                          <h2>Quick Links</h2>
+                          <ul>
+                              <li>
+                                  <i class="fa fa-circle"></i>
+                                  <a routerLink="">Home</a>
+                              </li>
+                              <li>
+                                  <i class="fa fa-circle"></i>
+                                  <a routerLink="/gallery">Gallery</a>
+                              </li>
+                              <li>
+                                  <i class="fa fa-circle"></i>
+                                  <a routerLink="/aboutus">About us</a>
+                              </li>
+                              <li>
+                                  <i class="fa fa-circle"></i>
+                                  <a routerLink="/feedback">Feedback</a>
+                              </li>
+                              <li>
+                                  <i class="fa fa-circle"></i>
+                                  <a routerLink="/contactus">Contact us</a>
+                              </li>
+                              
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="col-md-4">
+                      <div class="footer-all-menu">
+                          <h2>Services</h2>
+                          <ul>
+                              <li>
+                                  <i class="fa fa-circle"></i>
+                                  <a routerLink="/fooditem">Food Item</a>
+                              </li>
+                              <li>
+                                  <i class="fa fa-circle"></i>
+                                  <a routerLink="/gallery">Photography & Videography</a>
+                              </li>
+                              <!-- <li>
+                                  <i class="fa fa-circle"></i>
+                                  <a routerLink="/beautician">Beautician</a>
+                              </li>
+                              <li>
+                                  <i class="fa fa-circle"></i>
+                                  <a routerLink="/vehicle">car & Vehicles</a>
+                              </li> -->
+                              
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="col-md-3">
+                      <div class="footer-all-menu">
+                          <h2>Events</h2>
+                          <ul>
+                              <li>
+                                  <i class="fa fa-circle"></i>
+                                  <a routerLink="">Wedding</a>
+                              </li>
+                              <li>
+                                  <i class="fa fa-circle"></i>
+                                  <a routerLink="menu">Reception</a>
+                              </li>
+                              <li>
+                                  <i class="fa fa-circle"></i>
+                                  <a routerLink="gallery">Puberty Ceremony</a>
+                              </li> 
+                          </ul>
+                      </div>
+                  </div>
+              </div>  
+          </div>
+      </section>
+      
+  
+  
+    </div>
+  </body>
+  
